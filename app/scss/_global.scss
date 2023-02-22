@@ -1,0 +1,10 @@
+body{
+  color: #436372;
+  @extend %rubik-500;
+}
+
+.container{
+  max-width: 100%;
+  padding: 10px 75px;
+  margin: 0;
+}
