@@ -20,7 +20,8 @@
         font-size: 36px;
         line-height: 56px;
         padding-left: 15px;
-        color: #436372;
+        color: $title-grey;
+        @extend %dmsans-700;
     }
 }
 
@@ -32,7 +33,7 @@
         margin-left: 30px;
     }
     &__list-link{
-        color: #436372;
+        color: $title-grey;
     }
 }
 
@@ -75,15 +76,219 @@
     margin-left: 18px;
     width: 180px;
     border-radius: 25px;
-    background-color: #fcd7b6;
+    background-color: $ocher-bright;
     justify-content: space-evenly;
 }
 .user-nav__item-menu{
     margin-left: 18px;
-    background-color: #a3bbc8;
+    background-color: $btn-grey;
 }
 
+.footer{
+    padding: 0 300px;
+    margin-top: 75px;
+    &__top{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 75px;
+        border-bottom: 1px solid $grey;
+    }
+    &__top-list{
+    }
+    &__title{
+        color: #1f2044;
+        font-size: 16px;
+        line-height: 21px;
+        margin: 20px 0;
+        text-transform: uppercase;
+    }
+    &__top-contacts{
+    display: flex;
+    flex-direction: column;
+    max-width: 170px;
+    margin-right: 130px;
+    .logo{
+        margin-bottom: 20px;
+    }
+    }
+    &__top-services{
+        max-width: 115px;
+    }
+    &__top-account{
+        max-width: 115px;
+        margin-left: 170px;
+    }
+    &__top-form{
+        margin-left: 200px;
+        max-width: 270px;
+    }
+    &__top-addres,
+    &__top-email,
+    &__top-tel{
+        text-decoration: none;
+        color: $grey;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+    &__link{
+        text-decoration: none;
+        color: $grey;
+        font-size: 14px;
+        line-height: 32px;
+        @extend %dmsans-500;
+    } 
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        padding: 35px 0;
+    }
+    &__nav{
+        .footer__link{
+            padding: 0 10px;
+            text-align: center;
+        }
+        .footer__link + .footer__link{
+            border-left: 1px solid $grey;
+        } 
+    }
+}
+.form{
+  &-text{
+    text-decoration: none;
+    color: $grey;
+    font-size: 14px;
+    line-height: 24px;
+    @extend %dmsans-500;    
+    margin-bottom: 30px;
+  } 
+  &-input{
+    max-width: 170px;
+    background-color: $ocher-bim;
+    border: none;
+    padding: 10px;
+    color: #234969;
+    margin: 0;
+  }
+  &-btn{
+    max-width: 100px;
+    background-color: $btn-grey;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+  }
+}
 
+.top-slider{
+    &__content{
+        background-image: url('../images/slider-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center center;
+        height: 100%;
+    }
+    &__item{
+        padding: 200px 280px 200px;
+        display: flex !important;
+        justify-content: space-between;
+    }
+    &__right{
+        margin-left: 100px;
+        margin-top: 60px;
+    }
+    &__title{
+        font-size: 72px;
+        line-height: 70px;
+        color: #243f4d;
+        max-width: 450px;
+        @extend %dmsans-700;
+        margin-bottom: 30px;
+    }
+    &__text{
+        max-width: 370px;
+        font-size: 18px;
+        line-height: 30px;
+        @extend %rubik-500;
+        color: $grey;
+        margin-bottom: 30px;
+    }
+    &__img{
+        margin-top: 40px;
+    }
+    &__btn{
+        border: none;
+        background-color: $btn-grey;
+        max-width: 200px;
+        padding: 20px 95px 20px 20px;
+        position: relative;
+        color: #fff;
+    }
+    &__btn::after{
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/arrow-right.png');
+        width: 22px;
+        height: 9px;
+        right: 20px;
+        top: 23px;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+
+        li + li{
+            margin-left: 10px;
+        }
+
+        li.slick-active{
+            button {
+                background-color: #fff;
+            }
+        }
+        button{
+            border: none;
+            font-size: 10px;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fde3cc;
+            transition: all .3s;
+        }
+    }
+    &__bottom{
+        background-color: $ocher-bim;
+        display: flex;
+        justify-content: space-around;
+        padding: 40px;
+    }
+    &__bottom-item{
+        display: flex;
+        align-items: center;
+    }
+    &__bottom-item__content{
+        margin-left: 25px;
+    }
+    &__bottom-img{
+        width: auto;
+        height: auto;
+    }
+    &__bottom-title{
+        font-size: 18px;
+        line-height: 40px;
+        @extend %dmsans-700;
+    }
+    &__bottom-text{
+        font-size: 16px;
+        line-height: 30px;
+        @extend %dmsans-400;
+        max-width: 200px;
+    }
+}
 
 
 @import 'media';
