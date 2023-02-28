@@ -18,3 +18,15 @@ body{
   padding: 10px 75px;
   margin: 0;
 }
+
+.title{
+  color: #191919;
+  font-size: 36px;
+  line-height: 40px;
+  @extend %dmsans-700;
+  display: flex;
+  justify-content: center;
+}
+.mixitup-control-active button{
+  color: #191919;
+}
