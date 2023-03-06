@@ -27,6 +27,32 @@ body{
   display: flex;
   justify-content: center;
 }
-.mixitup-control-active button{
-  color: #191919;
+.arrow__btn{
+  border: none;
+  background-color: $btn-grey;
+  max-width: 200px;
+  padding: 20px 95px 20px 20px;
+  position: relative;
+  color: #fff;
+  &::after{
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/arrow-right.png');
+    width: 22px;
+    height: 9px;
+    right: 20px;
+    top: 23px;
+  }
+}
+.filter-btn{
+  border: none;
+  background-color: transparent;
+  @extend %dmsans-500;
+  font-size: 16px;
+  color: $grey;
+  cursor: pointer;
+  padding: 0;
+  & + .filter-btn{
+      margin-left: 25px;
+  }
 }

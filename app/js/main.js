@@ -6,8 +6,10 @@ $(function(){
 
     var mixer = mixitup('.products__content');
 
-    $('.products__menu-btn').on('hover', function(){
-        $('.products__menu-btn').toggleClass('products__menu-btn--active');
+    var mixer2 = mixitup('.design__items')
+
+    $('.filter-btn').on('hover', function(){
+        $('.filter-btn').toggleClass('filter-btn--active');
     }
     );
 });
