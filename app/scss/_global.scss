@@ -56,3 +56,50 @@ body{
       margin-left: 25px;
   }
 }
+
+.top{
+  background-color: #edf1f4;
+  @extend %rubik-400;
+  &__inner{
+    padding: 30px 0;
+    text-align: center;
+  }
+  &__title{
+    font-size: 36px;
+    margin-bottom: 17px;
+  }
+}
+.breadcrumbs{
+  display: inline-flex;
+  &__item{
+    font-size: 14px;
+    line-height: 24px;
+    padding-right: 20px;
+    position: relative;
+    @extend %rubik-500;
+  }
+  &__item::after{
+    content: "/";
+    position: absolute;
+    right: 9px;
+  }
+  &__item:last-child{
+    padding-right: 0;
+    &::after{
+      display: none;
+    }
+  }
+  &__link{
+    color: $title-grey;
+  }
+}
+.partners{
+  background-color: $ocher-bim;
+  padding: 80px 375px;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}

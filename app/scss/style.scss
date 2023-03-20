@@ -9,7 +9,6 @@
     @extend %dmsans-700;
     &__inner{
         display: flex;
-        justify-content: space-between;
         align-items: center;
     }
     
@@ -27,6 +26,8 @@
 }
 
 .menu{
+    margin: 0 320px 0 480px;
+    width: 100%;
     &__list{
         display: flex;
     }
@@ -460,6 +461,11 @@
         justify-content: center;
         align-items: center;
     }
+    &__play-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .blog{
     margin-top: 110px;
@@ -487,14 +493,8 @@
             right: 380px;
         }
     }
-    &__partners{
-        background-color: $ocher-bim;
+    .partners{
         padding: 260px 375px 80px;
-    }
-    &__partners-list{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
     &__items{
         position: absolute;
@@ -542,6 +542,77 @@
         color: white;
         top: -22px;
     }
+}
+.modal-form{
+    padding: 110px 0 120px;
+    display: flex;
+    justify-content: center;
+    @extend %rubik-400;
+    &__btn{
+        display: block;
+        background-color: $btn-grey;
+        border: none;
+        padding: 20px 210px;
+        @extend %rubik-500;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+    }
+    &__help{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        label{
+            margin-right: 190px;
+        }
+        a{
+            color: $title-grey;
+        }
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 30px;
+    &__label{
+        margin-bottom: 30px;
+        display: block;
+        max-width: 470px;
+        width: 100%;
+    }
+    &__input{
+        margin-top: 15px;
+        display: block;
+        border: 1px solid #f6f6f6;
+        height: 55px;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+}
+.register__link{
+    margin: 25px 0;
+    color: $title-grey;
+    @extend %rubik-500;
+}
+.register__btn{
+    display: block;
+    border: 1px solid $title-grey;
+    background-color: #fff;
+    @extend %dmsans-700;
+    font-size: 18px;
+    padding: 20px 150px;
+    color: #243f4d;
+    cursor: pointer;
+    max-width: 470px;
+    width: 100%;
 }
 
 
