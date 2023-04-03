@@ -28,3 +28,11 @@ $title-grey: #436372;
 $btn-grey: #a3bbc8;
 $ocher-bim: #fef7f0;
 $ocher-bright: #fcd7b6;
+
+%checkbox-hidden{
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
